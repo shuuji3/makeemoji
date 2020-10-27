@@ -31,11 +31,12 @@ import EmojiPanel from "../EmojiPanel/index";
 export const blank = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`;
 
 const testImageData: { url: string; alt: string }[] = [
-  { url: "cat", alt: "An excited-looking white cat" },
-  { url: "thonk", alt: "The thonk meme" },
-  { url: "gandalf", alt: "Gandalf the wizard smiling" },
-  { url: "bitcoin", alt: "The Bitcoin logo" },
-  { url: "surreal", alt: "The surreal man meme" }
+  { url: "pumpkin.png", alt: "A Jack-O-Lantern" },
+  { url: "cat.jpg", alt: "An excited-looking white cat" },
+  { url: "thonk.jpg", alt: "The thonk meme" },
+  { url: "gandalf.jpg", alt: "Gandalf the wizard smiling" },
+  { url: "bitcoin.jpg", alt: "The Bitcoin logo" },
+  { url: "surreal.jpg", alt: "The surreal man meme" }
 ];
 
 const rotateExif = async (uri: string) => {
@@ -89,7 +90,7 @@ export const App: FunctionComponent = () => {
   useEffect(() => {
     (async () => {
       const uris = await Promise.all(
-        testImageData.map(({ url }) => getImageDataUri(`/${url}.jpg`))
+        testImageData.map(({ url }) => getImageDataUri(`/${url}`))
       );
       setTestImages(uris);
       setBase(uris[0]);
