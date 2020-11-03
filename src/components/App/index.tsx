@@ -31,7 +31,7 @@ import EmojiPanel from "../EmojiPanel/index";
 export const blank = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`;
 
 const testImageData: { url: string; alt: string }[] = [
-  { url: "pumpkin.png", alt: "A Jack-O-Lantern" },
+  { url: "vote.png", alt: "A ballot box with the word Vote on it" },
   { url: "cat.jpg", alt: "An excited-looking white cat" },
   { url: "thonk.jpg", alt: "The thonk meme" },
   { url: "gandalf.jpg", alt: "Gandalf the wizard smiling" },
